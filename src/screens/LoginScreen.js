@@ -12,6 +12,9 @@ const LoginScreen = ({ navigation }) => {
       alert('Invalid credentials');
     }
   };
+  const handleCRUDButton = () => {
+    navigation.navigate('TestCrudOperations');
+  };
 
   return (
     <View style={styles.container}>
@@ -33,6 +36,9 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
             <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>    
+        <TouchableOpacity style={styles.button} onPress={handleCRUDButton}>
+          <Text style={styles.buttonText}>Check CRUD Operations</Text>
+        </TouchableOpacity> 
     </View>
   );
 };
@@ -62,6 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   button: {
+    marginTop: 20,
     backgroundColor: '#262698',
     padding: 16,
     borderRadius: 4,
